@@ -16,13 +16,13 @@
 
     exports = ___CSS_LOADER_API_IMPORT___(true); // Module
 
-    exports.push([module.i, "/* You can add global styles to this file, and also import other style files */", "", {
+    exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n}", "", {
       "version": 3,
-      "sources": ["P:\\projekty\\weather-forecast/src\\styles.scss"],
+      "sources": ["P:\\projekty\\weather-forecast/src\\styles.scss", "styles.scss"],
       "names": [],
-      "mappings": "AAAA,8EAAA",
+      "mappings": "AAAA;EACE,SAAA;EACA,UAAA;ACCF",
       "file": "styles.scss",
-      "sourcesContent": ["/* You can add global styles to this file, and also import other style files */\n"]
+      "sourcesContent": ["body {\n  margin: 0;\n  padding: 0;\n}\n", "body {\n  margin: 0;\n  padding: 0;\n}"]
     }]); // Exports
 
     module.exports = exports;
