@@ -6,6 +6,16 @@
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
+  "svg": [
+    {
+      "src": "assets/svg/Pogoda-dzien.svg",
+      "type": "image/svg"
+    },
+    {
+      "src": "assets/svg/Pogoda-noc.svg",
+      "type": "image/svg"
+    }
+  ],
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
