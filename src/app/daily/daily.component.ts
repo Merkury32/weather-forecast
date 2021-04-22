@@ -16,6 +16,7 @@ export class DailyComponent implements OnInit {
 
   ngOnInit() {
     document.body.className = 'body-night';
+    console.log(document.documentElement.clientHeight);
 
     this.weatherService.getData().subscribe((data) => {
       console.log(data);
