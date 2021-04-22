@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { weatherService } from '../service/weather.service';
 
 @Component({
   selector: 'app-daily',
   templateUrl: './daily.component.html',
   styleUrls: ['./daily.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class DailyComponent implements OnInit {
   constructor(private weatherService: weatherService) {}
@@ -14,6 +15,8 @@ export class DailyComponent implements OnInit {
   currentWeather;
 
   ngOnInit() {
+    document.body.className = 'body-night';
+
     this.weatherService.getData().subscribe((data) => {
       console.log(data);
 
