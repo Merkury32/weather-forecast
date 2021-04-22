@@ -10,20 +10,23 @@ import { weatherService } from '../service/weather.service';
 export class DailyComponent implements OnInit {
   constructor(private weatherService: weatherService) {}
 
-  currentTemperature: number;
-  currentFeelsTemperature: number;
-  currentWeather;
+  currentTemperature: string;
+  currentFeelsTemperature: string;
+  currentWeather: string;
+  currentTime: string;
 
   ngOnInit() {
     document.body.className = 'body-night';
     console.log(document.documentElement.clientHeight);
 
-    this.weatherService.getData().subscribe((data) => {
+    this.weatherService.getWeather().subscribe((data) => {
       console.log(data);
 
-      this.currentTemperature = data[4].temp;
-      this.currentFeelsTemperature = data[4].feels_like;
+      this.currentTemperature = data[4].temp + ' °C';
+      this.currentFeelsTemperature = data[4].feels_like + ' °C';
       this.currentWeather = data[4].weather[0].description;
     });
+
+    this.currentTime = this.weatherService.getDate();
   }
 }
