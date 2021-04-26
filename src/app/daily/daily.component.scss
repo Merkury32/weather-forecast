@@ -15,3 +15,43 @@
   padding: 0;
   padding-bottom: calc(100% * 3 / 4);
 }
+
+.current-weather-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+
+.current-location-header {
+  margin: 47px 0 0 0;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.current-time-header {
+  margin: 3px 0 0 0;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.current-temperature-header {
+  margin: 22% 0 0 0;
+  font-size: 58px;
+}
+
+.current-feelsTemperature-header {
+  margin: 2px 0 0 0;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.current-line-breaker {
+  margin: 5px 0 0 0;
+}
+
+.current-weather-header {
+  margin: 5px 0 0 0;
+  font-size: 16px;
+  font-weight: 300;
+}
