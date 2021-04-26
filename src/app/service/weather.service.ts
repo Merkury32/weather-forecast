@@ -12,7 +12,7 @@ export class weatherService {
   getWeather() {
     return this.http
       .get(
-        `https://api.openweathermap.org/data/2.5/onecall?lat=52.0887&lon=17.01506&units=metric&exclude=daily,hourly,weekly,minutely&appid=${environment.apiKey}`
+        `https://api.openweathermap.org/data/2.5/onecall?lat=52.0887&lon=17.01506&units=metric&lang=pl&exclude=daily,hourly,weekly,minutely&appid=${environment.apiKey}`
       )
       .pipe(
         map((responseData) => {
