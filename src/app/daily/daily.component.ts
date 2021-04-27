@@ -25,6 +25,9 @@ export class DailyComponent implements OnInit {
       this.currentTemperature = Math.round(data[4].temp) + ' °C';
       this.currentFeelsTemperature = Math.round(data[4].feels_like) + ' °C';
       this.currentWeather = data[4].weather[0].description;
+      this.currentWeather =
+        this.currentWeather.charAt(0).toUpperCase() +
+        this.currentWeather.slice(1);
     });
 
     this.currentTime = this.weatherService.getDate();
