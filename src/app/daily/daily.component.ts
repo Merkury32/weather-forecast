@@ -60,18 +60,10 @@ export class DailyComponent implements OnInit {
 
       for (let j = date; j <= 6; j++) {
         this.daysNumbers.push(j);
-
-        if (j == date) {
-          this.days[j] = 'Dzisiaj';
-        }
       }
 
       for (let k = 0; k <= date; k++) {
         this.daysNumbers.push(k);
-
-        if (k == date) {
-          this.days[k] = 'Dzisiaj';
-        }
       }
 
       console.log(this.daysNumbers);

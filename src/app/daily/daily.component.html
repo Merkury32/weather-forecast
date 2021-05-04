@@ -8,15 +8,11 @@
 </div>
 
 <div class="daily-weather-div">
-  <div class="daily-one-day-div" *ngFor="let element of dailyTemperature; index as i;">
+  <div *ngFor="let element of dailyTemperature; index as i;" [ngClass]="{'daily-one-day-div-last' :  i == 7, 'daily-one-day-div' : i !=9}">
     <p>ICON</p>
     <p>{{element}}</p>
-    <p>{{days[daysNumbers[i]]}}</p>
-  </div>
-  <div class="daily-one-day-div-last">
-    <p>ICON</p>
-    <p>20°/10°</p>
-    <p>Sobota</p>
+    <p *ngIf='i == 0'>Dzisiaj</p>
+    <p *ngIf='i != 0'>{{days[daysNumbers[i]]}}</p>
   </div>
 </div>
 
