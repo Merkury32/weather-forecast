@@ -16,6 +16,7 @@ export class DailyComponent implements OnInit {
   currentTime: string;
 
   dailyTemperature = [];
+  dailyWeather = [];
   daysNumbers = [];
   days = [];
 
@@ -33,8 +34,6 @@ export class DailyComponent implements OnInit {
         this.currentWeather.charAt(0).toUpperCase() +
         this.currentWeather.slice(1);
 
-      //let date = new Date(data[7][1].dt * 1000);
-
       for (let i = 0; i < 8; i++) {
         this.dailyTemperature.push(
           Math.round(data[7][i].temp.day) +
@@ -42,6 +41,9 @@ export class DailyComponent implements OnInit {
             (Math.round(data[7][i].temp.night) + '°')
         );
 
+        this.dailyWeather.push(data[7][i].weather[0].id);
+
+        console.log(this.dailyWeather);
         console.log(this.dailyTemperature);
       }
 
