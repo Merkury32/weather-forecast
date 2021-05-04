@@ -15,6 +15,10 @@ export class DailyComponent implements OnInit {
   currentWeather: string;
   currentTime: string;
 
+  dailyTemperature = [];
+  daysNumbers = [];
+  days = [];
+
   ngOnInit() {
     document.body.className = 'body-night';
     console.log(document.documentElement.clientHeight);
@@ -28,6 +32,49 @@ export class DailyComponent implements OnInit {
       this.currentWeather =
         this.currentWeather.charAt(0).toUpperCase() +
         this.currentWeather.slice(1);
+
+      //let date = new Date(data[7][1].dt * 1000);
+
+      for (let i = 0; i < 8; i++) {
+        this.dailyTemperature.push(
+          Math.round(data[7][i].temp.day) +
+            '°/' +
+            (Math.round(data[7][i].temp.night) + '°')
+        );
+
+        console.log(this.dailyTemperature);
+      }
+
+      let date = new Date().getDay();
+
+      this.days.push(
+        'Niedziela',
+        'Poniedziałek',
+        'Wtorek',
+        'Środa',
+        'Czwartek',
+        'Piątek',
+        'Sobota'
+      );
+      console.log(this.days);
+
+      for (let j = date; j <= 6; j++) {
+        this.daysNumbers.push(j);
+
+        if (j == date) {
+          this.days[j] = 'Dzisiaj';
+        }
+      }
+
+      for (let k = 0; k <= date; k++) {
+        this.daysNumbers.push(k);
+
+        if (k == date) {
+          this.days[k] = 'Dzisiaj';
+        }
+      }
+
+      console.log(this.daysNumbers);
     });
 
     this.currentTime = this.weatherService.getDate();

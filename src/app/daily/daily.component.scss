@@ -55,3 +55,27 @@
   font-size: 16px;
   font-weight: 300;
 }
+
+.daily-weather-div {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow-x: auto;
+  color: #ffffff;
+  margin: 50% 5px 0 5px;
+  text-align: center;
+}
+
+.daily-one-day-div {
+  flex: 0 0 auto;
+  margin: 0px 15px;
+}
+
+.daily-one-day-div-last {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.daily-weather-div::-webkit-scrollbar {
+  display: none;
+}

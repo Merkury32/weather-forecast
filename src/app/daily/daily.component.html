@@ -7,3 +7,16 @@
   <p class="current-weather-header">{{currentWeather}}</p>
 </div>
 
+<div class="daily-weather-div">
+  <div class="daily-one-day-div" *ngFor="let element of dailyTemperature; index as i;">
+    <p>ICON</p>
+    <p>{{element}}</p>
+    <p>{{days[daysNumbers[i]]}}</p>
+  </div>
+  <div class="daily-one-day-div-last">
+    <p>ICON</p>
+    <p>20°/10°</p>
+    <p>Sobota</p>
+  </div>
+</div>
+
