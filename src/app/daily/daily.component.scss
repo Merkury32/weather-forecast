@@ -59,10 +59,11 @@
 .daily-weather-div {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: stretch;
   overflow-x: auto;
   color: #ffffff;
   margin: 50% 5px 0 5px;
+  padding-left: 20px;
   text-align: center;
 }
 
@@ -72,9 +73,13 @@
 }
 
 .daily-one-day-div-last {
-  padding-right: 15px;
+  padding-right: 30px;
 }
 
 .daily-weather-div::-webkit-scrollbar {
   display: none;
+}
+
+i {
+  font-size: 38px;
 }
