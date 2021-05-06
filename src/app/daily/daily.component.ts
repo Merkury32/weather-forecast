@@ -32,7 +32,7 @@ export class DailyComponent implements OnInit {
 
         this.weatherService
           .getCity(data.coords.latitude, data.coords.longitude)
-          .subscribe((data) => {
+          .subscribe((data: any) => {
             this.currentCity = data.locality;
           });
       });
