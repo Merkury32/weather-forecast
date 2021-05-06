@@ -14,7 +14,7 @@ export class weatherService {
       .get(
         //52.0887
         //17.01506
-        `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&lang=pl&appid=${environment.apiKey}`
+        `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&lang=pl&appid=${environment.weatherApiKey}`
       )
       .pipe(
         map((responseData) => {
