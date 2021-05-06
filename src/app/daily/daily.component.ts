@@ -24,7 +24,15 @@ export class DailyComponent implements OnInit {
     document.body.className = 'body-night';
     console.log(document.documentElement.clientHeight);
 
-    this.weatherService.getWeather().subscribe((data) => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((data) => {
+        this.showWeather(data.coords.latitude, data.coords.longitude);
+      });
+    }
+  }
+
+  showWeather(latitude: number, longitude: number) {
+    this.weatherService.getWeather(latitude, longitude).subscribe((data) => {
       console.log(data);
 
       this.currentTemperature = Math.round(data[4].temp) + ' °C';

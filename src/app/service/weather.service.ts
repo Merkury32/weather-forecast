@@ -9,10 +9,12 @@ import { map } from 'rxjs/operators';
 export class weatherService {
   constructor(private http: HttpClient) {}
 
-  getWeather() {
+  getWeather(latitude: number, longitude: number) {
     return this.http
       .get(
-        `https://api.openweathermap.org/data/2.5/onecall?lat=52.0887&lon=17.01506&units=metric&lang=pl&appid=${environment.apiKey}`
+        //52.0887
+        //17.01506
+        `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&lang=pl&appid=${environment.apiKey}`
       )
       .pipe(
         map((responseData) => {
