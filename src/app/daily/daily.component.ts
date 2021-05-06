@@ -10,6 +10,8 @@ import { weatherService } from '../service/weather.service';
 export class DailyComponent implements OnInit {
   constructor(private weatherService: weatherService) {}
 
+  currentCity: string;
+
   currentTemperature: string;
   currentFeelsTemperature: string;
   currentWeather: string;
@@ -27,6 +29,12 @@ export class DailyComponent implements OnInit {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((data) => {
         this.showWeather(data.coords.latitude, data.coords.longitude);
+
+        this.weatherService
+          .getCity(data.coords.latitude, data.coords.longitude)
+          .subscribe((data) => {
+            this.currentCity = data.locality;
+          });
       });
     }
   }
