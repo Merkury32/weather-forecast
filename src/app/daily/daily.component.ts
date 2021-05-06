@@ -47,7 +47,7 @@ export class DailyComponent implements OnInit {
         console.log(this.dailyTemperature);
       }
 
-      let date = new Date().getDay() + 2;
+      let date = new Date().getDay();
 
       this.days.push(
         'Niedziela',
