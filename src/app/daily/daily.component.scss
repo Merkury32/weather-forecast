@@ -1,85 +1,175 @@
-.body-day {
-  background: url("../../assets/svg/Pogoda-dzien.svg") no-repeat center center
-    fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+@media only screen and (max-width: 385px) {
+  .body-day {
+    background: url("../../assets/svg/Pogoda-dzien.svg") no-repeat center center
+      fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .body-night {
+    background: url("../../assets/svg/Pogoda-noc.svg") no-repeat center center
+      fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .current-weather-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+  }
+
+  .current-location-header {
+    margin: 47px 0 0 0;
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+  .current-time-header {
+    margin: 3px 0 0 0;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .current-temperature-header {
+    margin: 22% 0 0 0;
+    font-size: 58px;
+  }
+
+  .current-feelsTemperature-header {
+    margin: 2px 0 0 0;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .current-line-breaker {
+    margin: 5px 0 0 0;
+  }
+
+  .current-weather-header {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .daily-weather-div {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: stretch;
+    overflow-x: auto;
+    color: #ffffff;
+    margin: 50% 5px 0 5px;
+    padding-left: 20px;
+    text-align: center;
+  }
+
+  .daily-one-day-div {
+    flex: 0 0 auto;
+    margin: 0px 15px;
+  }
+
+  .daily-one-day-div-last {
+    padding-right: 30px;
+  }
+
+  .daily-weather-div::-webkit-scrollbar {
+    display: none;
+  }
+
+  i {
+    font-size: 38px;
+  }
 }
 
-.body-night {
-  background: url("../../assets/svg/Pogoda-noc.svg") no-repeat center center
-    fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+@media only screen and (max-width: 420px) {
+  .body-day {
+    background: url("../../assets/svg/Pogoda-dzien2.svg") no-repeat center
+      center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 
-.current-weather-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #ffffff;
-}
+  .body-night {
+    background: url("../../assets/svg/Pogoda-noc2.svg") no-repeat center center
+      fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 
-.current-location-header {
-  margin: 47px 0 0 0;
-  font-size: 32px;
-  font-weight: 400;
-}
+  .current-weather-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+  }
 
-.current-time-header {
-  margin: 3px 0 0 0;
-  font-size: 20px;
-  font-weight: 300;
-}
+  .current-location-header {
+    margin: 47px 0 0 0;
+    font-size: 32px;
+    font-weight: 400;
+  }
 
-.current-temperature-header {
-  margin: 22% 0 0 0;
-  font-size: 58px;
-}
+  .current-time-header {
+    margin: 3px 0 0 0;
+    font-size: 20px;
+    font-weight: 300;
+  }
 
-.current-feelsTemperature-header {
-  margin: 2px 0 0 0;
-  font-size: 16px;
-  font-weight: 300;
-}
+  .current-temperature-header {
+    margin: 22% 0 0 0;
+    font-size: 58px;
+  }
 
-.current-line-breaker {
-  margin: 5px 0 0 0;
-}
+  .current-feelsTemperature-header {
+    margin: 2px 0 0 0;
+    font-size: 16px;
+    font-weight: 300;
+  }
 
-.current-weather-header {
-  margin: 5px 0 0 0;
-  font-size: 16px;
-  font-weight: 300;
-}
+  .current-line-breaker {
+    margin: 5px 0 0 0;
+  }
 
-.daily-weather-div {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: stretch;
-  overflow-x: auto;
-  color: #ffffff;
-  margin: 50% 5px 0 5px;
-  padding-left: 20px;
-  text-align: center;
-}
+  .current-weather-header {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    font-weight: 300;
+  }
 
-.daily-one-day-div {
-  flex: 0 0 auto;
-  margin: 0px 15px;
-}
+  .daily-weather-div {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: stretch;
+    overflow-x: auto;
+    color: #ffffff;
+    margin: 50% 5px 0 5px;
+    padding-left: 20px;
+    text-align: center;
+  }
 
-.daily-one-day-div-last {
-  padding-right: 30px;
-}
+  .daily-one-day-div {
+    flex: 0 0 auto;
+    margin: 0px 15px;
+  }
 
-.daily-weather-div::-webkit-scrollbar {
-  display: none;
-}
+  .daily-one-day-div-last {
+    padding-right: 30px;
+  }
 
-i {
-  font-size: 38px;
+  .daily-weather-div::-webkit-scrollbar {
+    display: none;
+  }
+
+  i {
+    font-size: 38px;
+  }
 }
