@@ -1,4 +1,4 @@
-@media only screen and (max-height: 700px) {
+@media only screen and (min-height: 400px) {
   .body-day {
     background: url("../../assets/svg/Pogoda-dzien2.svg") no-repeat center
       center fixed;
@@ -29,7 +29,7 @@
   }
 }
 
-@media only screen and (max-height: 900px) {
+@media only screen and (min-height: 700px) {
   .body-day {
     background: url("../../assets/svg/Pogoda-dzien.svg") no-repeat center center
       fixed;
@@ -54,7 +54,7 @@
     justify-content: stretch;
     overflow-x: auto;
     color: #ffffff;
-    margin: 55% 5px 0 0px;
+    margin: 50% 5px 0 0px;
     padding-left: 20px;
     text-align: center;
   }

@@ -23,7 +23,6 @@ export class DailyComponent implements OnInit {
   days = [];
 
   ngOnInit() {
-    document.body.className = 'body-night';
     console.log(document.documentElement.clientHeight);
 
     if (navigator.geolocation) {
@@ -42,6 +41,11 @@ export class DailyComponent implements OnInit {
   showWeather(latitude: number, longitude: number) {
     this.weatherService.getWeather(latitude, longitude).subscribe((data) => {
       console.log(data);
+
+      let sunrise = data[4].sunrise;
+      let sunset = data[4].sunset;
+
+      this.changeBackground(sunrise, sunset);
 
       this.currentTemperature = Math.round(data[4].temp) + ' °C';
       this.currentFeelsTemperature = Math.round(data[4].feels_like) + ' °C';
@@ -88,5 +92,15 @@ export class DailyComponent implements OnInit {
     });
 
     this.currentTime = this.weatherService.getDate();
+  }
+
+  changeBackground(sunrise: number, sunset: number) {
+    let currentUTC = Math.floor(new Date().getTime() / 1000);
+
+    if (currentUTC > sunrise) {
+      document.body.className = 'body-day';
+    } else {
+      document.body.className = 'body-night';
+    }
   }
 }
