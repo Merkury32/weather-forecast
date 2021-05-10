@@ -97,7 +97,7 @@ export class DailyComponent implements OnInit {
   changeBackground(sunrise: number, sunset: number) {
     let currentUTC = Math.floor(new Date().getTime() / 1000);
 
-    if (currentUTC > sunrise) {
+    if (currentUTC > sunrise && currentUTC < sunset) {
       document.body.className = 'body-day';
     } else {
       document.body.className = 'body-night';
