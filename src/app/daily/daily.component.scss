@@ -130,7 +130,31 @@ i {
   }
 
   .current-temperature-header {
-    margin: 35% 0 0 0;
+    margin: 38% 0 0 0;
+    font-size: 58px;
+  }
+
+  .daily-one-day-div {
+    flex: 0 0 auto;
+    margin: 0px 15px;
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-height: 850px) {
+  .daily-weather-div {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: stretch;
+    overflow-x: auto;
+    color: #ffffff;
+    margin: 71% 5px 0 0px;
+    padding-left: 20px;
+    text-align: center;
+  }
+
+  .current-temperature-header {
+    margin: 42% 0 0 0;
     font-size: 58px;
   }
 
