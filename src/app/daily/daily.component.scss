@@ -1,7 +1,7 @@
 @media only screen and (min-height: 400px) {
   .body-day {
-    background: url("../../assets/svg/Pogoda-dzien2.svg") no-repeat center
-      center fixed;
+    background: url("../../assets/svg/Pogoda-dzien.svg") no-repeat center center
+      fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -9,7 +9,7 @@
   }
 
   .body-night {
-    background: url("../../assets/svg/Pogoda-noc2.svg") no-repeat center center
+    background: url("../../assets/svg/Pogoda-noc.svg") no-repeat center center
       fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -29,10 +29,10 @@
   }
 }
 
-@media only screen and (min-height: 700px) {
+@media only screen and (min-height: 740px) {
   .body-day {
-    background: url("../../assets/svg/Pogoda-dzien.svg") no-repeat center center
-      fixed;
+    background: url("../../assets/svg/Pogoda-dzien2.svg") no-repeat center
+      center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -40,7 +40,7 @@
   }
 
   .body-night {
-    background: url("../../assets/svg/Pogoda-noc.svg") no-repeat center center
+    background: url("../../assets/svg/Pogoda-noc2.svg") no-repeat center center
       fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
