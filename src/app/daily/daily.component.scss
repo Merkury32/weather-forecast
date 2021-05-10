@@ -1,65 +1,3 @@
-@media only screen and (min-height: 400px) {
-  .body-day {
-    background: url("../../assets/svg/Pogoda-dzien.svg") no-repeat center center
-      fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
-  .body-night {
-    background: url("../../assets/svg/Pogoda-noc.svg") no-repeat center center
-      fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
-  .daily-weather-div {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: stretch;
-    overflow-x: auto;
-    color: #ffffff;
-    margin: 50% 5px 0 5px;
-    padding-left: 20px;
-    text-align: center;
-  }
-}
-
-@media only screen and (min-height: 740px) {
-  .body-day {
-    background: url("../../assets/svg/Pogoda-dzien2.svg") no-repeat center
-      center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
-  .body-night {
-    background: url("../../assets/svg/Pogoda-noc2.svg") no-repeat center center
-      fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
-  .daily-weather-div {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: stretch;
-    overflow-x: auto;
-    color: #ffffff;
-    margin: 50% 5px 0 0px;
-    padding-left: 20px;
-    text-align: center;
-  }
-}
-
 .current-weather-div {
   display: flex;
   flex-direction: column;
@@ -115,4 +53,90 @@
 
 i {
   font-size: 38px;
+}
+
+@media only screen and (min-height: 400px) {
+  .body-day {
+    background: url("../../assets/svg/Pogoda-dzien.svg") no-repeat center center
+      fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .body-night {
+    background: url("../../assets/svg/Pogoda-noc.svg") no-repeat center center
+      fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .daily-weather-div {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: stretch;
+    overflow-x: auto;
+    color: #ffffff;
+    margin: 50% 5px 0 5px;
+    padding-left: 20px;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-height: 700px) {
+  .daily-weather-div {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: stretch;
+    overflow-x: auto;
+    color: #ffffff;
+    margin: 58% 5px 0 0px;
+    padding-left: 20px;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-height: 740px) {
+  .body-day {
+    background: url("../../assets/svg/Pogoda-dzien2.svg") no-repeat center
+      center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .body-night {
+    background: url("../../assets/svg/Pogoda-noc2.svg") no-repeat center center
+      fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .daily-weather-div {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: stretch;
+    overflow-x: auto;
+    color: #ffffff;
+    margin: 65% 5px 0 0px;
+    padding-left: 20px;
+    text-align: center;
+  }
+
+  .current-temperature-header {
+    margin: 35% 0 0 0;
+    font-size: 58px;
+  }
+
+  .daily-one-day-div {
+    flex: 0 0 auto;
+    margin: 0px 15px;
+    font-size: 18px;
+  }
 }
