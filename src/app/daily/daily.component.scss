@@ -69,8 +69,29 @@
   display: none;
 }
 
+.daily-weather-div {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: stretch;
+  overflow-x: auto;
+  color: #ffffff;
+  margin: 50% 5px 0 5px;
+  padding-left: 20px;
+  text-align: center;
+}
+
 i {
   font-size: 38px;
+}
+
+.powered-paragraph {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  bottom: 4px;
+  right: 10px;
+  color: #ffffff;
+  font-size: 14px;
 }
 
 @media only screen and (min-height: 400px) {
