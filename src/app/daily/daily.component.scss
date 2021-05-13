@@ -88,10 +88,46 @@ i {
   position: absolute;
   margin: 0;
   padding: 0;
-  bottom: 4px;
+  bottom: 12px;
   right: 10px;
   color: #ffffff;
   font-size: 14px;
+}
+
+@media only screen and (min-height: 200px) {
+  .body-day {
+    background: url("../../assets/svg/Pogoda-dzien.svg") no-repeat center center
+      fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .body-night {
+    background: url("../../assets/svg/Pogoda-noc.svg") no-repeat center center
+      fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .current-temperature-header {
+    margin: 10% 0 0 0;
+    font-size: 58px;
+  }
+
+  .daily-weather-div {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: stretch;
+    overflow-x: auto;
+    color: #ffffff;
+    margin: 5% 5px 0 5px;
+    padding-left: 20px;
+    text-align: center;
+  }
 }
 
 @media only screen and (min-height: 400px) {
@@ -119,7 +155,7 @@ i {
     justify-content: stretch;
     overflow-x: auto;
     color: #ffffff;
-    margin: 50% 5px 0 5px;
+    margin: 45% 5px 0 5px;
     padding-left: 20px;
     text-align: center;
   }
