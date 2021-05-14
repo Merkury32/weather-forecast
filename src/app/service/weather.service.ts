@@ -9,11 +9,10 @@ import { map } from 'rxjs/operators';
 export class weatherService {
   constructor(private http: HttpClient) {}
 
+  // Pobierane danych z OpenWeather Api i przekształcanie ich na tablice obiektów
   getWeather(latitude: number, longitude: number) {
     return this.http
       .get(
-        //52.0887
-        //17.01506
         `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&units=metric&lang=pl&appid=${environment.weatherApiKey}`
       )
       .pipe(
@@ -29,6 +28,7 @@ export class weatherService {
       );
   }
 
+  // Ustalanie dzisiejszej daty w formacie dzień miesiąc rok
   getDate() {
     var date = new Date();
 
@@ -56,6 +56,7 @@ export class weatherService {
     return dateString;
   }
 
+  // Przekształcanie koordynatów geograficznych na nazwe miasta
   getCity(latitude: number, longitude: number) {
     return this.http.get(
       `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=pl`
