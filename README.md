@@ -1,6 +1,6 @@
-### To jest kod źródłowy aplikacji weather-forecast
-Kliknij [tutaj](https://github.com/Merkury32/weather-forecast-dist) aby zacząć używać aplikacji.
+### This is source code of weather-forecast application.
+Click [here](https://github.com/Merkury32/weather-forecast-dist) to start using an application.
 
-Lista użytych API:
+Used API:
 - [OpenWeather](https://openweathermap.org/api)
 - [BigDataCloud](https://www.bigdatacloud.com/)
